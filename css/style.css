@@ -1,0 +1,47 @@
+.noche {
+	background-color: #1E1E2B;
+	color: white;
+}
+
+.dia {
+	background-color: white;
+	color: black;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+}
+
+.switch {
+	margin: 1rem;
+	align-self: flex-end;
+}
+
+.innerSwitch {
+	display: inline-block;
+	cursor: pointer;
+	border: 1px solid #555;
+	border-radius: 1.25rem;
+	width: 3.125rem;
+	text-align: center;
+	font-size: 1rem;
+	padding: 0.19rem;
+	margin-left: 0.315rem;
+	transition: .5s;
+}
+
+.innerSwitch:hover {
+	width: 3.5rem;
+	margin-left: 0;
+	transition: .5s;
+}
+
+.hechoPor {
+	margin: 1rem;
+	align-self: flex-start;
+}
+
+.navbar {
+	border-bottom: 1px solid gray;
+}

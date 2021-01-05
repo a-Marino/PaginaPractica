@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/modo-noche.js" defer></script>
+	<script src="js/suma-resta.js" defer></script>
+	<title>Suma y Resta</title>
+</head>
+<body class="dia">
+	<nav class="navbar navbar-expand-lg navbar-dark" id="nav">
+		<a href="#" class="navbar-brand">aMarino</a>
+		<div class="collapse navbar-collapse">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item">					
+					<a href="index.html" class='nav-link'>Index</a>				
+				</li>
+				<li class="nav-item">					
+					<a href="contador.html" class='nav-link'>Contador</a>				
+				</li>
+				<li class="nav-item">					
+					<a href="suma-resta.html" class="nav-link">Suma y Resta<span class="sr-only">(current)</span></a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<div class="switch">
+		Modo Noche: <span id="btnTema" class="innerSwitch">OFF</span>
+	</div>
+	<div class="text-center mt-5">
+		<h1>Sumar o Restar dos numeros</h1>
+		<p>Elija la operacion que desea realizar</p>
+		<div class="text-center mt-4">
+			<input type="number" id="numero1" required>
+			<button id="sumar" class="btn btn-dark mx-2">+</button>
+			<span>O</span>
+			<button id="restar" class="btn btn-dark mx-2">-</button>
+			<input type="number" id="numero2" required>
+		</div>
+		<div id="calculo" class="mt-3 display-4"></div>
+	</div>	
+</body>
+</html>
