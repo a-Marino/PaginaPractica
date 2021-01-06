@@ -1,8 +1,6 @@
 // CAMBIAR TEMA
 var btnTema = document.querySelector('#btnTema');
 var body = document.querySelector('body');
-var btnSuma = document.querySelector('#sumar');
-var btnResta = document.querySelector('#restar');
 var nav = document.querySelector('#nav');
 btnTema.addEventListener('click', cambiarTema);
 function noche() {
@@ -11,6 +9,14 @@ function noche() {
     nav.classList.remove('navbar-light');
     nav.classList.add('navbar-dark');
     btnTema.innerHTML = 'ON';
+    if (document.querySelector('#sumar') && document.querySelector('#restar')) {
+        var btnSuma = document.querySelector('#sumar');
+        var btnResta = document.querySelector('#restar');
+        btnSuma.classList.remove('btn-dark');
+        btnSuma.classList.add('btn-light');
+        btnResta.classList.remove('btn-dark');
+        btnResta.classList.add('btn-light');
+    }
 }
 function dia() {
     body.classList.remove('noche');
@@ -18,6 +24,14 @@ function dia() {
     nav.classList.remove('navbar-dark');
     nav.classList.add('navbar-light');
     btnTema.innerHTML = 'OFF';
+    if (document.querySelector('#sumar') && document.querySelector('#restar')) {
+        var btnSuma = document.querySelector('#sumar');
+        var btnResta = document.querySelector('#restar');
+        btnSuma.classList.remove('btn-light');
+        btnSuma.classList.add('btn-dark');
+        btnResta.classList.remove('btn-light');
+        btnResta.classList.add('btn-dark');
+    }
 }
 function cambiarTema() {
     if (body.className == 'dia') {
