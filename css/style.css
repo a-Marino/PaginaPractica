@@ -45,3 +45,14 @@ body {
 .navbar {
 	border-bottom: 1px solid gray;
 }
+
+#pagina-upso {
+	width: 700px;
+	height: auto;
+	transition: transform .5s;
+}
+
+#pagina-upso:hover {
+	transform: scale(1.03);
+	opacity: 0.7;
+}
