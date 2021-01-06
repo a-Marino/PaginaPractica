@@ -2,8 +2,7 @@
 var btnTema = document.querySelector('#btnTema');
 var body = document.querySelector('body');
 var nav = document.querySelector('#nav');
-btnTema.addEventListener('click', cambiarTema);
-function noche() {
+var noche = function () {
     body.classList.remove('dia');
     body.classList.add('noche');
     nav.classList.remove('navbar-light');
@@ -17,8 +16,8 @@ function noche() {
         btnResta.classList.remove('btn-dark');
         btnResta.classList.add('btn-light');
     }
-}
-function dia() {
+};
+var dia = function () {
     body.classList.remove('noche');
     body.classList.add('dia');
     nav.classList.remove('navbar-dark');
@@ -32,8 +31,8 @@ function dia() {
         btnResta.classList.remove('btn-light');
         btnResta.classList.add('btn-dark');
     }
-}
-function cambiarTema() {
+};
+btnTema.addEventListener('click', function () {
     if (body.className == 'dia') {
         noche();
         localStorage.setItem('user', JSON.stringify({ modoNoche: true }));
@@ -42,13 +41,11 @@ function cambiarTema() {
         dia();
         localStorage.setItem('user', JSON.stringify({ modoNoche: false }));
     }
-}
+});
 window.addEventListener('DOMContentLoaded', function () {
     var userSettings = JSON.parse(localStorage.getItem('user'));
-    if (userSettings.modoNoche == true) {
+    if (userSettings.modoNoche == true)
         noche();
-    }
-    else {
+    else
         dia();
-    }
 });

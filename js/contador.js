@@ -2,23 +2,20 @@ var btn = document.querySelector('#btn');
 var btnRestar = document.querySelector('#btnRestar');
 var resultado = document.querySelector('#resultado');
 var contador = 0;
-btn.addEventListener('click', aumentarContador);
-btnRestar.addEventListener('click', restarContador);
-function aumentarContador() {
+btn.addEventListener('click', function () {
     contador++;
     btnRestar.hidden = false;
     resultado.innerHTML = contador.toString();
     frases();
-}
-function restarContador() {
-    if (contador <= 1) {
+});
+btnRestar.addEventListener('click', function () {
+    if (contador <= 1)
         btnRestar.hidden = true;
-    }
     contador--;
     resultado.innerHTML = contador.toString();
     frases();
-}
-function frases() {
+});
+var frases = function () {
     var p = document.createElement('p');
     p.classList.add('text-info');
     switch (contador) {
@@ -40,4 +37,4 @@ function frases() {
         default:
             break;
     }
-}
+};

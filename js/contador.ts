@@ -2,26 +2,22 @@ const btn = document.querySelector<HTMLButtonElement>('#btn');
 const btnRestar = document.querySelector<HTMLButtonElement>('#btnRestar');
 const resultado = document.querySelector<HTMLDivElement>('#resultado');
 let contador:number = 0;
-btn.addEventListener('click', aumentarContador);
-btnRestar.addEventListener('click', restarContador);
 
-function aumentarContador(){
+btn.addEventListener('click', ()=> {
 	contador++;
 	btnRestar.hidden = false;
 	resultado.innerHTML = contador.toString();
 	frases();
-}
+});
 
-function restarContador(){
-	if (contador <= 1) {
-		btnRestar.hidden = true;
-	}
+btnRestar.addEventListener('click', ()=> {
+	if (contador <= 1) btnRestar.hidden = true;	
 	contador--;
 	resultado.innerHTML = contador.toString();
 	frases();
-}
+});
 
-function frases(){
+const frases = ()=> {
 	const p = document.createElement('p');
 	p.classList.add('text-info');
 
@@ -44,4 +40,4 @@ function frases(){
 		default:
 			break;
 	}
-}
+};

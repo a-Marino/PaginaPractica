@@ -28,13 +28,13 @@ body {
 	font-size: 1rem;
 	padding: 0.19rem;
 	margin-left: 0.315rem;
-	transition: .5s;
+	transition: .3s;
 }
 
 .innerSwitch:hover {
 	width: 3.5rem;
 	margin-left: 0;
-	transition: .5s;
+	transition: .3s;
 }
 
 .hechoPor {

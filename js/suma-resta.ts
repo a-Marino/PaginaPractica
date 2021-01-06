@@ -14,7 +14,7 @@ function calcular(e) {
 		parrafo.innerHTML = 'Debe colocar ambos numeros para poder realizar la operacion';
 		parrafo.classList.add('text-danger');
 	 	divResultado.appendChild(parrafo);
-	 	setTimeout(function(){
+	 	setTimeout(()=> {
  			parrafo.innerHTML = '';
  			parrafo.classList.remove('text-danger');
 		}, 3000);

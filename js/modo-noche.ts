@@ -3,10 +3,7 @@ const btnTema = document.querySelector<HTMLButtonElement>('#btnTema');
 const body = document.querySelector<HTMLDivElement>('body');
 const nav = document.querySelector<HTMLDivElement>('#nav');
 
-btnTema.addEventListener('click', cambiarTema);
-
-
-function noche() {
+const noche = ()=> {
 	body.classList.remove('dia');
 	body.classList.add('noche');
 	nav.classList.remove('navbar-light');
@@ -20,9 +17,9 @@ function noche() {
 		btnResta.classList.remove('btn-dark');
 		btnResta.classList.add('btn-light');
 	}
-}
+};
 
-function dia() {
+const dia = ()=> {
 	body.classList.remove('noche');
 	body.classList.add('dia');
 	nav.classList.remove('navbar-dark');
@@ -36,9 +33,9 @@ function dia() {
 		btnResta.classList.remove('btn-light');
 		btnResta.classList.add('btn-dark');
 	}
-}
+};
 
-function cambiarTema(){
+btnTema.addEventListener('click', ()=>{
 	if (body.className == 'dia') {
 		noche();
 		localStorage.setItem('user', JSON.stringify( { modoNoche: true }));
@@ -46,15 +43,13 @@ function cambiarTema(){
 		dia();
 		localStorage.setItem('user', JSON.stringify( { modoNoche: false }));
 	} 
-}
-
+});
 
 window.addEventListener('DOMContentLoaded', ()=>{
 	let userSettings = JSON.parse(localStorage.getItem('user'));
 
-	if (userSettings.modoNoche == true) {
+	if (userSettings.modoNoche == true)
 		noche();
-	} else {
+	else 
 		dia();
-	}
 }); 
