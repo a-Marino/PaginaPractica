@@ -47,12 +47,54 @@ body {
 }
 
 #pagina-upso {
-	width: 700px;
+	width: 1000px;
 	height: auto;
-	transition: transform .5s;
 }
 
-#pagina-upso:hover {
+.pagina-upso:hover {
 	transform: scale(1.03);
 	opacity: 0.7;
+	transition: .2s;
+}
+
+.pagina-upso {
+	position: relative;
+	width: 100%;
+	transition: .2s;
+}
+
+.pagina-upso:hover::after {
+	content: 'Click para ingresar';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	margin-left: 10px;
+	margin-left: 10px;
+	padding: 6px 8px;
+	max-width: calc((100%) - 60px);
+	font-size: 12px;
+	font-weight: 700;
+	color: #fff;
+	background-color: #1f98f4;
+	box-sizing: border-box;
+	border-radius: 2px;
+	z-index: 0;
+}
+
+.redes-sociales {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.redes-sociales-item {
+	margin: 20px;
+}
+
+.redes-sociales-item > a {
+	text-decoration: none;
+}
+
+svg {
+	margin-right: 5px;
 }
